@@ -4,7 +4,7 @@ import postsData from "../data/posts.json";
 import type { Post } from "../types/post";
 
 const LatestPosts = () => {
-  // نجيب أحدث المقالات (غير المميزة) ونرتبهم حسب التاريخ
+ 
   const latestPosts = (postsData.posts as Post[])
     .filter((post) => !post.featured)
     .slice(0, 3);

@@ -9,7 +9,6 @@ interface BlogCardProps {
 
 const BlogCard = ({ post, viewMode = "grid" }: BlogCardProps) => {
   if (viewMode === "list") {
-    // شكل القائمة (List)
     return (
       <article className="group bg-[#161616] rounded-2xl border border-[#262626] overflow-hidden hover:border-orange-500/30 transition-all duration-500">
         <Link to={`/blog/${post.slug}`} className="flex flex-col md:flex-row">

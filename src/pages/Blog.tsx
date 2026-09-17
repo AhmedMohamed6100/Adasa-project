@@ -19,7 +19,6 @@ const Blog = () => {
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
   const [currentPage, setCurrentPage] = useState(1);
 
-  // قراءة الـ category من الـ URL وتحديث الـ state عند فتح الصفحة أو تغيير الـ URL
   useEffect(() => {
     const categoryFromUrl = searchParams.get("category");
     if (categoryFromUrl) {
@@ -29,7 +28,7 @@ const Blog = () => {
     }
   }, [searchParams]);
 
-  // الفلترة
+
   const filteredPosts = useMemo(() => {
     return allPosts.filter((post) => {
       const matchCategory =
@@ -59,7 +58,6 @@ const Blog = () => {
     setActiveCategory(value);
     setCurrentPage(1);
     
-    // تحديث الـ URL ليعكس التصنيف الجديد بدون إحداث إعادة تحميل للصفحة
     if (value === "جميع المقالات") {
       searchParams.delete("category");
       setSearchParams(searchParams);

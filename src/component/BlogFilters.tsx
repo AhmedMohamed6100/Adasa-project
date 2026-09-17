@@ -16,7 +16,7 @@ const BlogFilters = ({
   setActiveCategory,
   posts,
 }: BlogFiltersProps) => {
-  // نجيب التصنيفات الموجودة فعليًا في الداتا
+  
   const categories = ["جميع المقالات", ...new Set(posts.map((post) => post.category))];
 
   return (

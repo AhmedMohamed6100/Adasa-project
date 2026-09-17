@@ -7,7 +7,6 @@ import { FaMountainSun, FaSliders } from "react-icons/fa6";
 const Categories = () => {
   const posts = postsData.posts as Post[];
 
-  // حساب عدد المقالات في كل تصنيف
   const categories = [
     {
       name: "إضاءة",

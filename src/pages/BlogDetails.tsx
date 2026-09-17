@@ -2,6 +2,15 @@
 import { Link, useParams } from "react-router-dom";
 import postsData from "../data/posts.json";
 import type { Post } from "../types/post";
+import { FaHome, FaRegCalendarAlt } from "react-icons/fa";
+import {
+  FaCamera,
+  FaClipboardList,
+  FaRegClock,
+  FaRegEnvelope,
+  FaRegImage,
+  FaTag,
+} from "react-icons/fa6";
 
 const BlogDetails = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -12,7 +21,9 @@ const BlogDetails = () => {
     return (
       <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">المقال غير موجود</h1>
+          <h1 className="text-4xl font-bold text-white mb-4">
+            المقال غير موجود
+          </h1>
           <Link to="/blog" className="text-orange-500 hover:text-orange-400">
             العودة للمدونة
           </Link>
@@ -21,7 +32,6 @@ const BlogDetails = () => {
     );
   }
 
-  // تقسيم المحتوى حسب ## عشان نعمل Table of Contents
   const sections = post.content
     .split("\n")
     .filter((line) => line.startsWith("## "))
@@ -47,11 +57,17 @@ const BlogDetails = () => {
         {/* Breadcrumb */}
         <div className="absolute top-8 right-8 left-8">
           <nav className="inline-flex items-center gap-2 px-4 py-2 bg-black/30 backdrop-blur-md rounded-full text-sm border border-white/10">
-            <Link to="/" className="text-white/70 hover:text-white transition-colors">
-              🏠
+            <Link
+              to="/"
+              className="text-white/70 hover:text-white transition-colors"
+            >
+              <FaHome className="w-4 h-4" />
             </Link>
             <span className="text-white/30">‹</span>
-            <Link to="/blog" className="text-white/70 hover:text-white transition-colors">
+            <Link
+              to="/blog"
+              className="text-white/70 hover:text-white transition-colors"
+            >
               المدونة
             </Link>
             <span className="text-white/30">‹</span>
@@ -72,8 +88,14 @@ const BlogDetails = () => {
                 {post.category}
               </Link>
               <div className="flex items-center gap-4 text-white/70 text-sm">
-                <span>📅 {post.date}</span>
-                <span>⏱ {post.readTime}</span>
+                <span className="flex items-center gap-1.5">
+                  <FaRegCalendarAlt className="w-4 h-4 text-orange-500" />
+                  {post.date}
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <FaRegClock className="w-4 h-4 text-orange-500" />
+                  {post.readTime}
+                </span>
               </div>
             </div>
 
@@ -120,7 +142,7 @@ const BlogDetails = () => {
                       className="text-2xl md:text-3xl font-bold text-white mt-14 mb-6 flex items-center gap-4 scroll-mt-24"
                     >
                       <span className="flex items-center justify-center w-10 h-10 bg-orange-500/10 rounded-xl border border-orange-500/30 text-orange-500">
-                        📷
+                        <FaCamera className="w-5 h-5" />
                       </span>
                       {title}
                     </h2>
@@ -128,7 +150,10 @@ const BlogDetails = () => {
                 }
                 if (line.trim() === "") return null;
                 return (
-                  <p key={index} className="text-neutral-300 leading-relaxed mb-6 text-lg">
+                  <p
+                    key={index}
+                    className="text-neutral-300 leading-relaxed mb-6 text-lg"
+                  >
                     {line}
                   </p>
                 );
@@ -139,7 +164,7 @@ const BlogDetails = () => {
             <div className="mt-14 p-6 bg-[#111111] rounded-2xl border border-[#262626]">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-orange-500/10 rounded-xl flex items-center justify-center border border-orange-500/30">
-                  🏷️
+                  <FaTag className="w-4 h-4" />
                 </div>
                 <h3 className="font-bold text-white">الوسوم</h3>
               </div>
@@ -167,10 +192,15 @@ const BlogDetails = () => {
                   <span className="text-xs text-orange-500 font-semibold uppercase tracking-wider">
                     كاتب المقال
                   </span>
-                  <h3 className="text-xl font-bold text-white mt-1">{post.author.name}</h3>
-                  <p className="text-neutral-500 text-sm mb-3">{post.author.role}</p>
+                  <h3 className="text-xl font-bold text-white mt-1">
+                    {post.author.name}
+                  </h3>
+                  <p className="text-neutral-500 text-sm mb-3">
+                    {post.author.role}
+                  </p>
                   <p className="text-neutral-400 text-sm leading-relaxed">
-                    مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير الفوتوغرافي.
+                    مصور محترف شغوف بمشاركة المعرفة والخبرات في عالم التصوير
+                    الفوتوغرافي.
                   </p>
                 </div>
               </div>
@@ -185,7 +215,7 @@ const BlogDetails = () => {
                 <div className="p-6 bg-[#111111] rounded-2xl border border-[#262626]">
                   <div className="flex items-center gap-3 mb-5">
                     <div className="w-10 h-10 bg-orange-500/10 rounded-xl flex items-center justify-center border border-orange-500/30">
-                      📋
+                      <FaClipboardList className="w-4 h-4" />
                     </div>
                     <h3 className="font-bold text-white">محتويات المقال</h3>
                   </div>
@@ -210,12 +240,18 @@ const BlogDetails = () => {
               <div className="p-6 bg-[#111111] rounded-2xl border border-[#262626]">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center p-4 bg-[#0a0a0a] rounded-xl">
-                    <p className="text-orange-500 text-xl mb-2">⏱</p>
-                    <p className="text-white font-bold text-sm">{post.readTime}</p>
+                    <div className="text-orange-500 text-xl mb-2">
+                      <FaRegClock className="w-6 h-6" />
+                    </div>{" "}
+                    <p className="text-white font-bold text-sm">
+                      {post.readTime}
+                    </p>
                     <p className="text-neutral-500 text-xs">وقت القراءة</p>
                   </div>
                   <div className="text-center p-4 bg-[#0a0a0a] rounded-xl">
-                    <p className="text-orange-500 text-xl mb-2">📅</p>
+                    <div className="text-orange-500 text-xl mb-2">
+                      <FaRegCalendarAlt className="w-6 h-6" />
+                    </div>{" "}
                     <p className="text-white font-bold text-sm">{post.date}</p>
                     <p className="text-neutral-500 text-xs">تاريخ النشر</p>
                   </div>
@@ -226,7 +262,7 @@ const BlogDetails = () => {
               <div className="p-6 bg-gradient-to-br from-orange-500/10 to-yellow-500/5 rounded-2xl border border-orange-500/20">
                 <div className="text-center">
                   <div className="w-14 h-14 bg-orange-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl">
-                    ✉️
+                    <FaRegEnvelope className="w-6 h-6" />
                   </div>
                   <h3 className="font-bold text-white mb-2">لا تفوّت جديدنا</h3>
                   <p className="text-neutral-400 text-sm mb-4">
@@ -250,11 +286,15 @@ const BlogDetails = () => {
             <div className="flex items-center justify-between mb-10">
               <div className="flex items-center gap-4">
                 <span className="w-12 h-12 bg-orange-500/10 rounded-2xl flex items-center justify-center border border-orange-500/30 text-xl">
-                  🖼️
+                  <FaRegImage className="w-5 h-5" />
                 </span>
                 <div>
-                  <h2 className="text-2xl font-bold text-white">مقالات قد تعجبك</h2>
-                  <p className="text-neutral-500 text-sm">استكشف المزيد من المحتوى المميز</p>
+                  <h2 className="text-2xl font-bold text-white">
+                    مقالات قد تعجبك
+                  </h2>
+                  <p className="text-neutral-500 text-sm">
+                    استكشف المزيد من المحتوى المميز
+                  </p>
                 </div>
               </div>
               <Link
