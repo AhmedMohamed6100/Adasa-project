@@ -1,0 +1,122 @@
+// // teamData.js
+// export const teamMembers = [
+//   {
+//     id: 1,
+//     name: 'سالم أحمد',
+//     role: 'مصور محترف',
+//     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face',
+//     isVerified: true,
+//     socials: {
+//       twitter: 'https://x.com',
+//       github: 'https://github.com',
+//       linkedin: 'https://linkedin.com',
+//     },
+//   },
+//   {
+//     id: 2,
+//     name: 'محمد علي',
+//     role: 'مصور بورتريه',
+//     image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face',
+//     isVerified: true,
+//     socials: {
+//       twitter: 'https://x.com',
+//       github: 'https://github.com',
+//       linkedin: 'https://linkedin.com',
+//     },
+//   },
+//   {
+//     id: 3,
+//     name: 'إبراهيم حسن',
+//     role: 'مصور طبيعة',
+//     image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face',
+//     isVerified: true,
+//     socials: {
+//       twitter: 'https://x.com',
+//       github: 'https://github.com',
+//       linkedin: 'https://linkedin.com',
+//     },
+//   },
+//   {
+//     id: 4,
+//     name: 'داود خالد',
+//     role: 'مدرب تصوير',
+//     image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face',
+//     isVerified: true,
+//     socials: {
+//       twitter: 'https://x.com',
+//       github: 'https://github.com',
+//       linkedin: 'https://linkedin.com',
+//     },
+//   },
+//   {
+//     id: 5,
+//     name: 'ليث محمود',
+//     role: 'فنان بصري',
+//     image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face',
+//     isVerified: true,
+//     socials: {
+//       twitter: 'https://x.com',
+//       github: 'https://github.com',
+//       linkedin: 'https://linkedin.com',
+//     },
+//   },
+//   {
+//     id: 6,
+//     name: 'جمال عبدالله',
+//     role: 'مصور ومراجع تقني',
+//     image: 'https://images.unsplash.com/photo-1463453091185-61582044d556?w=100&h=100&fit=crop&crop=face',
+//     isVerified: true,
+//     socials: {
+//       twitter: 'https://x.com',
+//       github: 'https://github.com',
+//       linkedin: 'https://linkedin.com',
+//     },
+//   },
+//   {
+//     id: 7,
+//     name: 'خالد الفيصل',
+//     role: 'مصور فلكي',
+//     image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop&crop=face',
+//     isVerified: true,
+//     socials: {
+//       twitter: 'https://x.com',
+//       github: 'https://github.com',
+//       linkedin: 'https://linkedin.com',
+//     },
+//   },
+//   {
+//     id: 8,
+//     name: 'نادر سعيد',
+//     role: 'مصور شوارع',
+//     image: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=100&h=100&fit=crop&crop=face',
+//     isVerified: true,
+//     socials: {
+//       twitter: 'https://x.com',
+//       github: 'https://github.com',
+//       linkedin: 'https://linkedin.com',
+//     },
+//   },
+//   {
+//     id: 9,
+//     name: 'هاني الشمري',
+//     role: 'مصور طعام',
+//     image: 'https://images.unsplash.com/photo-1552058544-f2b08422138a?w=100&h=100&fit=crop&crop=face',
+//     isVerified: true,
+//     socials: {
+//       twitter: 'https://x.com',
+//       github: 'https://github.com',
+//       linkedin: 'https://linkedin.com',
+//     },
+//   }, {
+//     id: 10,
+//     name: 'نادر سعيد',
+//     role: 'مصور شوارع',
+//     image: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=100&h=100&fit=crop&crop=face',
+//     isVerified: true,
+//     socials: {
+//       twitter: 'https://x.com',
+//       github: 'https://github.com',
+//       linkedin: 'https://linkedin.com',
+//     },
+//   },
+// ];
