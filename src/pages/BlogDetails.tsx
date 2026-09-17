@@ -1,4 +1,4 @@
-// src/pages/BlogDetails.tsx
+
 import { Link, useParams } from "react-router-dom";
 import postsData from "../data/posts.json";
 import type { Post } from "../types/post";
@@ -37,7 +37,7 @@ const BlogDetails = () => {
     .filter((line) => line.startsWith("## "))
     .map((line) => line.replace("## ", "").trim());
 
-  // مقالات مشابهة (نفس التصنيف)
+  
   const relatedPosts = posts
     .filter((p) => p.category === post.category && p.id !== post.id)
     .slice(0, 3);
